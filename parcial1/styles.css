@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    font-family: sans-serif;
+
+}
+
+header {
+    background-color: #3C3D52;
+    text-align: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 100;
+}
+.texto{
+    width: 92%;
+    top: 85px;
+    position: absolute;
+}
+.texto p{
+    padding-bottom: 15px;
+
+}
+.boton{
+    background-color: #262064;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    padding: 0.5rem;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    width: 85%;
+    background-color: #3C3D52;
+    margin: 1rem auto;
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    background-color: palevioletred;
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+.banner {
+    height: 50px;
+    width: 100%;
+}
+
+nav {
+    /*  background-color: brown; */
+    width: 50%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    display: flex;
+    background-color: #2D2B41;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main div {
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+    padding: 20px;
+
+}
+
+.reviews p {
+    width: 50%;
+}
+
+.caracteristicas {
+    background-color: #3C3D52;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 200px;
+
+}
+
+.uno {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.uno p {
+    width: 50%;
+    padding: 1rem;
+}
+
+.dos {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.dos p {
+    width: 50%;
+    padding: 1rem;
+}
+
+.carrusel {
+    background-color: #2D2B41;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+}
+.carrusel figure {
+    max-width: 1000px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+
+.carrusel img {
+    max-width: 100%;
+}
+.carruselhijo {
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.reviews {
+    background-color: #3C3D52;
+}
+
+.galeria {
+    background-color: #2D2B41;
+    width: 100%;
+
+
+}
+
+footer {
+    background-color: #3C3D52;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.columna {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+
+}
+
+.columna img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+.videotrailer{
+    background-color: #3C3D52;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.videotrailer h2{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.foot {
+    width: 100%;
+
+}
+.enlaces {
+    display: flex;
+    width: 100%;
+    
+}
+.enlaces p{
+    width: 50%;
+
+}
+
+@media screen and (max-width: 556px) {
+
+
+    h1 {
+        line-height: 4rem;
+    }
+
+    nav {
+        align-items: flex-end;
+    }
+
+    #menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 100%;
+    }
+
+
+    #burger li {
+        width: 2.5em;
+        list-style: none;
+        text-indent: -800px;
+        overflow: hidden;
+        margin: 0.75em;
+    }
+
+    #burger li a {
+        display: block;
+        height: 2.5rem;
+        background: url(img/menu.png) no-repeat;
+        background-size: cover;
+    }
+
+    #barra {
+        background-color: darkcyan;
+        position: absolute;
+        width: 100%;
+        top: 4rem;
+        left: 0;
+        height: 0;
+        transition: all 500ms;
+        overflow: hidden;
+    }
+
+    #burger li:last-child {
+        display: none;
+    }
+
+    nav:target #barra {
+        /* Si quiero que se abra de izquierda a derecha */
+        /*  left: 0;  */
+
+        /* Si quiero que abra de arriba para abajo */
+        height: calc(100vh - 4rem);
+    }
+
+    nav:target #burger li a {
+        background: url(img/cierre.png);
+        background-size: cover;
+    }
+
+    nav:target #burger li:first-child {
+        display: none;
+    }
+
+    nav:target #burger li:last-child {
+        display: block;
+    }
+
+    figure {
+        width: 90%;
+        margin: auto;
+    }
+
+
+}
+
+@media screen and (min-width: 577px) {
+
+    header,
+    section,
+    footer {
+        width: 95%;
+        margin: auto;
+    }
+
+
+    nav {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        margin: 0 1%;
+        width: 23%;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    .columna {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    header,
+    section,
+    footer {
+        max-width: 1300px;
+        width: 100%;
+    }
+    .carrusel{
+        width: 100%
+    };
+
+    header {
+        display: flex;
+    }
+
+    h1 {
+        padding-left: 1rem;
+    }
+
+    nav {
+        flex: 1;
+        align-self: center;
+        background: none;
+    }
+    nav ul li {
+        width: 100px;
+        margin: 0 5px;
+    }
+
+    nav ul li a:hover {
+        background-color: rgb(112, 164, 112);
+        text-decoration: underline;
+    }
+
+    .columna {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+}
